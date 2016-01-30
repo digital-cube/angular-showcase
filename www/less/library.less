@@ -1,0 +1,53 @@
+@import "reset.less";
+@import "variables.less";
+/* Library of global clases
+------------------------------------------------------------------------------*/
+.clear          { clear:both; }
+.float-left     { float:left; }
+.float-right    { float:right; }
+.inline         { display: inline; }
+.none           { display: none; }
+.show           { display: block; }
+.hide           { display: none; }
+.overflow-hidden { overflow: hidden; }
+
+.clickable      { cursor: pointer; }
+
+.text-left      { text-align:left; }
+.text-right     { text-align:right; }
+.text-center    { text-align:center; }
+.text-justify   { text-align:justify; }
+ 
+.bold           { font-weight:bold; }
+.italic         { font-style:italic; }
+.underline      { border-bottom:1px solid; }
+.highlight      { background:#ffc; }
+.uppercase      { text-transform: uppercase;} 
+
+.img-left       { float:left;margin:4px 10px 4px 0; }
+.img-right      { float:right;margin:4px 0 4px 10px; }
+ 
+.nopadding      { padding:0; }
+.noindent       { margin-left:0;padding-left:0; }
+.nobullet       { list-style:none;list-style-image:none; }
+
+.black          { color:#000; }
+.debug-border   { border: 1px solid red;}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+

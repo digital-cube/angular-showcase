@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<app-content>
+
+    <div id="demo-input-container">
+
+        Fill text field<br/>
+        <input ng-model='demoInputCtl.input_content' class="text-field-type1" type="text" ></input>
+        <br/>
+        you typing: <span>{{demoInputCtl.input_content}}</span>
+        <br/>
+        <input class='button' type='button' value='view result' ng-click='demoInputCtl.submit()'></input>
+        <br/>
+        <input class='button' type='button' value='clear' ng-click='demoInputCtl.clear()'></input>
+        <br/><br/>
+        <input type='checkbox' ng-model="demoInputCtl.cb1">&nbsp;checkbox example :: {{demoInputCtl.cb1}}</input>
+
+        <br/><br/>
+        date picker<br/>
+        <input type="date" ng-model="demoInputCtl.d1"></input><span> choosen date :: {{demoInputCtl.d1}}</span>
+
+
+
+    </div>
+
+</app-content>
+
+<app-footer></app-footer>
