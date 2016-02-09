@@ -12,8 +12,8 @@ directive('appFooter', function() {
         restrict: 'E',
         template: template,
         controller: Controller,
-        controllerAs: 'ctlFooter',
-        bindToController: true
+        controllerAs: 'vm',
+        scope: {}
     };
 });
 

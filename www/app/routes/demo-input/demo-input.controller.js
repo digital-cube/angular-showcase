@@ -1,17 +1,18 @@
 export default class Controller {
 
     constructor() {
-        this.input_content = 'nemanja';
-        this.cb1=true;
-        this.d1=new Date(2013, 9, 22);
+        this.inputValue = 'Digital Cube';
+        this.cb1 = true;
+        this.d1 = new Date(2013, 9, 22);
     }
 
     submit() {
-        alert(this.input_content);
+        alert(this.inputValue);
         return false;
     }
+
     clear() {
-        this.input_content = '';
+        this.inputValue = '';
     }
 
 }

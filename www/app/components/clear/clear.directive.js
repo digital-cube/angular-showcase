@@ -6,6 +6,7 @@ module('clearModule', []).
 directive('clear', function() {
     return {
         restrict: 'E',
-        template: '<div class="clear"></div>'
+        template: '<div class="clear"></div>',
+        scope: {}
     };
 });

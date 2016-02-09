@@ -1,6 +1,6 @@
 {
-  "name": "bmw",
-  "repository": "ijeremic/bmw",
+  "name": "Digital Cube",
+  "repository": "digital-cube/angular-showcase",
   "devDependencies": {
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
@@ -22,15 +22,23 @@
     "promise": "^6.0.1",
     "sinon": "^1.12.2"
   },
+  "scripts": {
+    "gulp": "gulp",
+    "jspm": "jspm",
+    "start": "gulp",
+    "prestart": "jspm install"
+  },
   "jspm": {
     "directories": {
       "baseURL": "www",
       "lib": "www/app"
     },
     "dependencies": {
-      "angular": "github:angular/bower-angular@^1.3.15",
+      "angular": "github:angular/bower-angular@^1.5.0",
+      "angular-bootstrap": "github:angular-ui/bootstrap-bower@^1.1.2",
       "angular-mocks": "github:angular/bower-angular-mocks@^1.3.15",
-      "angular-ui-router": "github:angular-ui/ui-router@^0.2.13",
+      "angular-ui-router": "github:angular-ui/ui-router@^0.2.18",
+      "bootstrap": "github:twbs/bootstrap@^3.3.6",
       "css": "github:systemjs/plugin-css@^0.1.9",
       "text": "github:systemjs/plugin-text@^0.0.2"
     },

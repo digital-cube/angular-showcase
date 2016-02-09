@@ -8,11 +8,18 @@ export default
 angular.
 module('appHeaderMenuModule', []).
 directive('appHeader', function() {
+
+    function link(scope, element, attrs) {
+        element.addClass('dc-header');
+    }
+
     return {
         restrict: 'E',
+        transclude: true,
         template: template,
         controller: Controller,
-        controllerAs: 'ctlHeader',
-        bindToController: true
+        controllerAs: 'vm',
+        scope: {},
+        link: link
     };
 });

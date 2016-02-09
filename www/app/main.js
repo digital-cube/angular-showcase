@@ -14,6 +14,9 @@ import appFooterMenuModule from './components/app-footer/app-footer.directive';
 import mainMenuModule from './components/main-menu/main-menu.directive';
 import appContentModule from './components/app-content/app-content.directive';
 
+import dcUsers from './components/users/users.module';
+
+import 'bootstrap/css/bootstrap.css!';
 import '/css/master.css!';
 
 export let mainModule = angular.module('main', [
@@ -31,6 +34,8 @@ export let mainModule = angular.module('main', [
     appContentModule.name,
     appFooterMenuModule.name,
     mainMenuModule.name,
+
+    dcUsers.name
 
 ]);
 

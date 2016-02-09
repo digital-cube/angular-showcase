@@ -13,7 +13,7 @@ export let demoIntervalRouteModule = angular.module('demoIntervalRouteModule', [
         url: '/demo-interval',
         template: template,
         controller: Controller,
-        controllerAs: 'demoIntervalCtl',
+        controllerAs: 'vm',
         bindToController: true
     });
   }

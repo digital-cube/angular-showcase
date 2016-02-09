@@ -1,70 +1,37 @@
 @import "library";
 @import "variables";
 
-app-header {
-  display:block;
-
-  //height:50px;
-
-  main-menu {
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #aaa;
-
-      li {
-        float: left;
-
-        a {
-          display: block;
-          color: black;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-
-        a:hover {
-          background-color: #999;
-        }
-
-      }
-
-    }
-
-  }
-
+.whole-content {
+  min-height: 80vh;
 }
 
-app-content {
+app-header {
   display:block;
-  margin:30px;
-  min-height:300px;
+  position: relative;
+  height: 10vh;
 
-  .text-field-type1 {
-    height:30px;
-    width:300px;
-  }
-
-  .button {
-    margin-top:30px;
-    width:100px;
-    height:30px;
-    background-color:#ccc;
-  }
-
-  p {
-    margin-top:5px;
-    margi-bottom:5px;
+  .page-title {
+    position: absolute;
+    right: 50px;
+    top: 13px;
+    color: steelblue;
+    font-weight: bold;
+    z-index: 1;
   }
 }
 
 app-footer {
   text-align:center;
-  height:30px;
   border-top:1px solid #555;
   display:block;
+  height: 10vh;
 }
 
+.panel-heading h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: normal;
+  width: 75%;
+  padding-top: 8px;
+}

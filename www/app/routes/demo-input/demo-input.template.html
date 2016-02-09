@@ -1,28 +1,26 @@
-<app-header></app-header>
+<app-header>Input page</app-header>
 
 <app-content>
-
-    <div id="demo-input-container">
-
-        Fill text field<br/>
-        <input ng-model='demoInputCtl.input_content' class="text-field-type1" type="text" ></input>
+    <form>
+        <div class="form-group">
+            <label>Fill text field</label>
+            <input type="text" class="form-control" ng-model='vm.inputValue' class="text-field-type1" />
+            <br/>
+            you typing: <span>{{vm.inputValue}}</span>
+        </div>
         <br/>
-        you typing: <span>{{demoInputCtl.input_content}}</span>
-        <br/>
-        <input class='button' type='button' value='view result' ng-click='demoInputCtl.submit()'></input>
-        <br/>
-        <input class='button' type='button' value='clear' ng-click='demoInputCtl.clear()'></input>
+        <button class='btn btn-primary' ng-click='vm.submit()'>View result</button>
+        <button class='btn btn-warning' ng-click='vm.clear()'>Reset</button>
         <br/><br/>
-        <input type='checkbox' ng-model="demoInputCtl.cb1">&nbsp;checkbox example :: {{demoInputCtl.cb1}}</input>
+
+        <label>
+            <input ng-model="vm.cb1" type="checkbox"> &nbsp;checkbox example :: {{vm.cb1}}
+        </label>
 
         <br/><br/>
         date picker<br/>
-        <input type="date" ng-model="demoInputCtl.d1"></input><span> choosen date :: {{demoInputCtl.d1}}</span>
-
-
-
-    </div>
-
+        <input type="date" ng-model="vm.d1"/><span> choosen date :: {{vm.d1}}</span>
+    </form>
 </app-content>
 
 <app-footer></app-footer>

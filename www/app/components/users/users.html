@@ -1,0 +1,49 @@
+<app-content>
+    <div class="project-settings-labels">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title pull-left">
+                    User list
+                </h3>
+
+                <button class="btn btn-sm btn-default pull-right hidden-xs add-label-set"
+                        ng-click="vm.createEditUser()">
+                    <span class="glyphicon glyphicon-plus-sign pull-left"></span>
+                    &nbsp;Add user
+                </button>
+                <button class="btn btn-xs btn-default pull-right visible-xs" ng-click="vm.createEditUser()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                <div class="clearfix"></div>
+            </div>
+
+            <table class="table table-bordered table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>E-mail</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+
+                <tr ng-repeat="(userId, user) in vm.users" class="user-listing">
+                    <td class="col-sm-2"><a ng-click="vm.detailUser(user)">{{user.firstName}}</a></td>
+                    <td class="col-sm-2">{{user.lastName}}</a></td>
+                    <td class="col-sm-2">{{user.email}}</td>
+                    <td class="col-sm-2">{{user.age}}</td>
+                    <td class="col-sm-2">
+                        <button type="button" class="btn btn-xs btn-default" ng-click="vm.createEditUser(user)"><span
+                                class="glyphicon glyphicon-edit"></span></button>
+                        <button type="button" class="btn btn-xs btn-danger"
+                                ng-click="vm.deleteUser(userId)"
+                                vicert-confirm-click>
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</app-content>
