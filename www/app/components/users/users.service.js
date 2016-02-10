@@ -22,5 +22,9 @@ export default function (module) {
             user.id = randomId;
             usersListMock[randomId] = user;
         }
+
+        this.get = function(userId) {
+            return usersListMock[userId];
+        }
     });
 }

@@ -1,7 +1,5 @@
 import angular from 'angular';
 
-import clearModule from './components/clear/clear.directive';
-
 import {mainConfigModule} from './config/main.config';
 import {indexRouteModule} from './routes/index/index.route';
 import {aboutRouteModule} from './routes/about/about.route';
@@ -17,11 +15,9 @@ import appContentModule from './components/app-content/app-content.directive';
 import dcUsers from './components/users/users.module';
 
 import 'bootstrap/css/bootstrap.css!';
-import '/css/master.css!';
+import '/css/app.css!';
 
 export let mainModule = angular.module('main', [
-
-    clearModule.name,
 
     mainConfigModule.name,
     indexRouteModule.name,

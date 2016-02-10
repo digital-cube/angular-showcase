@@ -2,37 +2,51 @@
     <h3 class="modal-title">{{vm.isCreateModal ? 'Create' : 'Edit'}} user</h3>
 </div>
 <div class="modal-body">
-    <form name="userCreateEditForm" novalidate role="form">
-        <div class="form-group row">
+    <form name="form" novalidate role="form">
+
+        <div class="form-group row" ng-class="{ 'has-error': form.firstName.$invalid && form.firstName.$touched }">
             <div class="col-md-12">
                 <label>First Name</label>
-                <input autofocus class="form-control" ng-maxlength="64" ng-minlength="3" name="firstName"
+                <input autofocus class="form-control" ng-maxlength="8" ng-minlength="3" name="firstName"
                        ng-model="vm.user.firstName" placeholder="First Name" required type="text"/>
+                <div class="help-block" ng-messages="form.firstName.$error" ng-if="form.firstName.$touched">
+                    <div ng-messages-include="app/components/common/messages.html"></div>
+                </div>
             </div>
         </div>
 
-        <div class="form-group row">
+        <div class="form-group row" ng-class="{ 'has-error': form.lastName.$invalid && form.lastName.$touched }">
             <div class="col-md-12">
                 <label>Last Name</label>
-                <input autofocus class="form-control" ng-maxlength="64" ng-minlength="3" name="lastName"
+                <input autofocus class="form-control" ng-maxlength="12" ng-minlength="3" name="lastName"
                        ng-model="vm.user.lastName" placeholder="Last Name" required type="text"/>
+                <div class="help-block" ng-messages="form.lastName.$error" ng-if="form.lastName.$touched">
+                    <div ng-messages-include="app/components/common/messages.html"></div>
+                </div>
             </div>
         </div>
 
-        <div class="form-group row">
+        <div class="form-group row" ng-class="{ 'has-error': form.age.$invalid && form.age.$touched }">
             <div class="col-md-12">
                 <label>Age</label>
-                <input autofocus class="form-control" min="0" max="99" name="age"
-                       ng-model="vm.user.age" placeholder="Age" required type="text"/>
+                <input autofocus class="form-control" min="1" max="99" ng-pattern="/^(0|[1-9][0-9]*)$/" name="age"
+                       ng-model="vm.user.age" placeholder="Age" required type="number" />
+                <div class="help-block" ng-messages="form.age.$error" ng-if="form.age.$touched">
+                    <div ng-messages-include="app/components/common/messages.html"></div>
+                    <div ng-message="pattern">Must be a valid number</div>
+                </div>
             </div>
         </div>
 
 
-        <div class="form-group row">
+        <div class="form-group row" ng-class="{ 'has-error': form.email.$invalid && form.email.$touched }">
             <div class="col-md-12">
                 <label>Email</label>
                 <input autofocus class="form-control" name="email"
                        ng-model="vm.user.email" placeholder="Email" required type="email"/>
+                <div class="help-block" ng-messages="form.email.$error" ng-if="form.email.$touched">
+                    <div ng-messages-include="app/components/common/messages.html"></div>
+                </div>
             </div>
         </div>
 
@@ -42,5 +56,5 @@
 
 <div class="modal-footer">
     <div class="btn btn-default" ng-click="vm.cancelButtonHandler()" type="button">Cancel</div>
-    <div class="btn btn-primary" ng-click="vm.okButtonHandler(userCreateEditForm)" type="button">OK</div>
+    <div class="btn btn-primary" ng-click="vm.okButtonHandler(form)" type="button">OK</div>
 </div>

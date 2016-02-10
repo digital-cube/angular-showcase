@@ -30,7 +30,7 @@
 
                 <tr ng-repeat="(userId, user) in vm.users" class="user-listing">
                     <td class="col-sm-2"><a ng-click="vm.detailUser(user)">{{user.firstName}}</a></td>
-                    <td class="col-sm-2">{{user.lastName}}</a></td>
+                    <td class="col-sm-2"><a ui-sref="app.userDetails({userId: userId})">{{user.lastName}}</a></td>
                     <td class="col-sm-2">{{user.email}}</td>
                     <td class="col-sm-2">{{user.age}}</td>
                     <td class="col-sm-2">

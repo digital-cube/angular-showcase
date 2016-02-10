@@ -5,6 +5,7 @@
 import angular from 'angular';
 
 import routes from './users.routes';
+import detailsRoutes from './details-separated-page/user-details-sp.routes';
 import UsersService from './users.service';
 
 import dcCore from '../core/core.module';
@@ -17,5 +18,6 @@ let m = angular.module('dcUsers', [
 
 UsersService(m);
 routes(m);
+detailsRoutes(m);
 
 export default m;

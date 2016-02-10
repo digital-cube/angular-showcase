@@ -1,26 +1,60 @@
 var Promise = require('promise'),
-    gulp    = require('gulp'),
-    path    = require('path'),
-    $       = require('gulp-load-plugins')();
+    gulp = require('gulp'),
+    path = require('path'),
+    //connect = require('gulp-connect'),
+    sass = require('gulp-sass'),
+    $ = require('gulp-load-plugins')();
     cachebust = new $.cachebust;
 
+//gulp.task('webserver', function() {
+//    connect.server({
+//        livereload: true,
+//        port: 9123,
+//        root: './www'
+//    });
+//});
+
 var startServer = function(){
-  return new Promise(function (fulfil) {
-    gulp.src('./www')
-      .pipe($.webserver({
-        port: 9123,
-        livereload: true,
-        fallback: 'index.html'
-      }))
-      .on('end', fulfil);
-  });
+    return new Promise(function (fulfil) {
+        gulp.src('./www')
+            .pipe($.webserver({
+                port: 9123,
+                livereload: true,
+                fallback: 'index.html'
+            }))
+            .on('end', fulfil);
+    });
 };
 
-gulp.task('default',
-  function() {
+// Compile Sass to CSS
+gulp.task('sass', function() {
+    return gulp.src('./sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./css/'));
+});
+
+//// HTML task
+//gulp.task('html', function () {
+//    return gulp.src('./app/*.html')
+//        .pipe(connect.reload());
+//});
+//
+////Js task
+//gulp.task('js', function() {
+//    return gulp.src('./app/**/*.js')
+//        .pipe(connect.reload());
+//});
+//
+////Watch task
+//gulp.task('watch',function() {
+//    gulp.watch('./sass/**/*.scss',['sass']);
+//    gulp.watch(['./app/**/*.html'], ['html']);
+//    gulp.watch(['./app/**/*.js'], ['js', 'js-lint']);
+//});
+
+gulp.task('default', ['sass'], function() {
     startServer();
-  }
-);
+});
 
 gulp.task('bust-config', function () {
   return gulp.src('www/config.js')

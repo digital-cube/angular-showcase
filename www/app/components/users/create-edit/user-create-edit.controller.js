@@ -19,10 +19,12 @@ export default class UserDetailsController {
     }
 
     okButtonHandler(form) {
-        if (this.isCreateModal) {
-            this._createHandler(form);
-        } else {
-            this._editHandler(form);
+        if (form.$valid) {
+            if (this.isCreateModal) {
+                this._createHandler(form);
+            } else {
+                this._editHandler(form);
+            }
         }
     }
 
