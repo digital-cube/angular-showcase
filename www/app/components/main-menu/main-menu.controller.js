@@ -4,7 +4,6 @@ export default class Controller {
     constructor($location) {
         this._$location = $location;
         this.menuItems = [
-            {title: 'Home', path: '/'},
             {title: 'Two-way binding', path: '/demo-input'},
             {title: 'Interval', path: '/demo-interval'},
             {title: 'Services', path: '/demo-service-call'},
@@ -14,7 +13,7 @@ export default class Controller {
     }
 
     getClass(path) {
-        return path === this._$location.url() ? 'active' : '';
+        return this._$location.url().indexOf(path) !== -1 ? 'active' : '';
     }
 }
 

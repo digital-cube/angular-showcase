@@ -3,39 +3,32 @@
 export default class Controller {
 
     constructor($interval) {
-
         this.$interval = $interval;
-
-        console.log("INTERVAL",$interval);
-
-        self=this;
-
-        this.interval_id = 0;
-        this.start_interval();
-
-
+        this.intervalId = 0;
+        this.startInterval();
     }
 
-    startstop() {
-        if (this.interval_id == 0)
-            this.start_interval();
-        else
-            this.stop_interval();
+    startStop() {
+        if (this.intervalId === 0) {
+            this.startInterval();
+        } else {
+            this.stopInterval();
+        }
     }
 
-    start_interval() {
+    startInterval() {
 
-        this.my_var = 0;
-        this.interval_id = this.$interval( ()=>{
-            this.my_var++;
+        this.intervalCounter = 0;
+        this.intervalId = this.$interval( ()=>{
+            this.intervalCounter++;
         }, 100);
 
     }
 
-    stop_interval() {
+    stopInterval() {
 
-        this.$interval.cancel(this.interval_id);
-        this.interval_id=0;
+        this.$interval.cancel(this.intervalId);
+        this.intervalId=0;
 
     }
 

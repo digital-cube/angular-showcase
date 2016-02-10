@@ -1,14 +1,19 @@
 <app-header>Service page</app-header>
 
 <app-content>
+    <form>
+        <div class="form-group">
+            <label>Url:</label>
+            <input type="text" class="form-control" ng-model="vm.baseUrl"/>
+        </div>
 
-    URL:<input type="text" ng-model="demoServiceCallCtl.url"></input>
+        <button class="btn btn-info" ng-click="vm.showContent()">Show content</button>
 
-    <br/><br/>
-
-    <input class="button" type="button" ng-click="demoServiceCallCtl.retreive_content()" value="retreive content'"></input>
-
-
+        <div style="margin-top: 40px;" ng-if="vm.response">
+            <label>Response</label>
+            <textarea class="response-box" rows="8">{{vm.response}}</textarea>
+        </div>
+    </form>
 </app-content>
 
 <app-footer></app-footer>

@@ -4,11 +4,15 @@
 
     <p>Ovaj demo prikazuje kako se koristi interval</p>
 
-    <p>u kontroleru se u atribut my_var inkrementira vrednost i ona je bindovana za deo ovog paragraa my_var=<b>{{vm.my_var}}</b></p>
+    <p>u kontroleru se u atribut intervalCounter inkrementira vrednost i ona je bindovana za deo ovog paragraa
+        Interval count = <b style="font-size: 30px;">{{vm.intervalCounter}}</b>
+    </p>
 
     <p>pritiskom na dugme star/stop dugme zaustavljate ili ponovo pokrecete interval</p>
 
-    <input class='button' type='button' value='start/stop' ng-click='vm.startstop()'></input>
+    <button class="btn btn-success" type="button" ng-click="vm.startStop()">
+        Start/Stop
+    </button>
 
 </app-content>
 

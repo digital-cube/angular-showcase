@@ -1,18 +1,10 @@
 var Promise = require('promise'),
     gulp = require('gulp'),
     path = require('path'),
-    //connect = require('gulp-connect'),
     sass = require('gulp-sass'),
     $ = require('gulp-load-plugins')();
     cachebust = new $.cachebust;
 
-//gulp.task('webserver', function() {
-//    connect.server({
-//        livereload: true,
-//        port: 9123,
-//        root: './www'
-//    });
-//});
 
 var startServer = function(){
     return new Promise(function (fulfil) {
@@ -28,29 +20,10 @@ var startServer = function(){
 
 // Compile Sass to CSS
 gulp.task('sass', function() {
-    return gulp.src('./sass/**/*.scss')
+    return gulp.src('www/sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('www/assets/css'));
 });
-
-//// HTML task
-//gulp.task('html', function () {
-//    return gulp.src('./app/*.html')
-//        .pipe(connect.reload());
-//});
-//
-////Js task
-//gulp.task('js', function() {
-//    return gulp.src('./app/**/*.js')
-//        .pipe(connect.reload());
-//});
-//
-////Watch task
-//gulp.task('watch',function() {
-//    gulp.watch('./sass/**/*.scss',['sass']);
-//    gulp.watch(['./app/**/*.html'], ['html']);
-//    gulp.watch(['./app/**/*.js'], ['js', 'js-lint']);
-//});
 
 gulp.task('default', ['sass'], function() {
     startServer();

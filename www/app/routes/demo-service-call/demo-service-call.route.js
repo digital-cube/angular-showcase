@@ -11,8 +11,9 @@ export let demoServiceCallModule = angular.module('demoServiceCallModule', [
         url: '/demo-service-call',
         template: template,
         controller: Controller,
-        controllerAs: 'demoServiceCallCtl',
-        bindToController: true
+        controllerAs: 'vm',
+        bindToController: true,
+        scope: {}
     });
   }
 ]);

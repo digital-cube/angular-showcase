@@ -1,5 +1,4 @@
 @import 'base/config';
-@import 'base/reset';
 
 .whole-content {
   min-height: 80vh;
@@ -13,14 +12,15 @@ navbar {
   height: 10vh;
 
   .page-title {
-    @include border-radius('8px');
+    @include border-radius(8px);
+    background-color: #1b6d85;
     position: absolute;
     right: 50px;
     top: 13px;
-    color: steelblue;
+    color: #fff;
     font-weight: bold;
     z-index: 1;
-    padding: 5px;
+    padding: 5px 10px;
   }
 }
 
@@ -39,4 +39,9 @@ app-footer {
   line-height: normal;
   width: 75%;
   padding-top: 8px;
+}
+
+.response-box {
+  width: 100%;
+  padding: 10px;
 }

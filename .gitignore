@@ -1,5 +1,6 @@
 www/jspm_packages
 node_modules
 www/css/
+www/assets
 .idea
 *~
