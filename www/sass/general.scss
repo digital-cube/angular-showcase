@@ -22,6 +22,16 @@ navbar {
     z-index: 1;
     padding: 5px 10px;
   }
+
+  .navbar-brand {
+    margin: 5px 0 0 0;
+    padding: 0;
+
+    img {
+      height: 40px;
+      margin-left: 10px;
+    }
+  }
 }
 
 .footer,
@@ -44,4 +54,26 @@ app-footer {
 .response-box {
   width: 100%;
   padding: 10px;
+}
+
+.home-page {
+
+  .panel-body {
+    text-align: center;
+  }
+
+  .logo-large {
+    height: 350px;
+  }
+
+  .web-location {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .git-hub-location {
+    font-size: 22px;
+    margin-top: 50px;
+    float: right;
+  }
 }
