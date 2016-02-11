@@ -2,7 +2,6 @@ import angular from 'angular';
 
 import {mainConfigModule} from './config/main.config';
 import {indexRouteModule} from './routes/index/index.route';
-import {aboutRouteModule} from './routes/about/about.route';
 import {demoInputRouteModule} from './routes/demo-input/demo-input.route';
 import {demoIntervalRouteModule} from './routes/demo-interval/demo-interval.route';
 import {demoServiceCallModule} from './routes/demo-service-call/demo-service-call.route';
@@ -21,7 +20,6 @@ export let mainModule = angular.module('main', [
 
     mainConfigModule.name,
     indexRouteModule.name,
-    aboutRouteModule.name,
     demoInputRouteModule.name,
     demoIntervalRouteModule.name,
     demoServiceCallModule.name,
