@@ -7,8 +7,7 @@ export default class NavbarController {
             {title: 'Two-way binding', path: '/demo-input'},
             {title: 'Interval', path: '/demo-interval'},
             {title: 'Services', path: '/demo-service-call'},
-            {title: 'Users', path: '/users'},
-            {title: 'About', path: '/about'}
+            {title: 'Users', path: '/users'}
         ];
     }
 
