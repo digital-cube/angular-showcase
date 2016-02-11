@@ -18,7 +18,8 @@ export default function (module) {
             11: {id: 11, firstName: 'Vukašin', lastName: 'Vučević', email: 'vukasin@digitalcube.rs', age: 18},
             12: {id: 12, firstName: 'Vladimir', lastName: 'Tarailo', email: 'vladimirtarailo@gmail.com', age: 18},
             13: {id: 13, firstName: 'Mladen', lastName: 'Marinković', email: 'mladen.marinkovic.788@gmail.com', age: 18},
-            14: {id: 14, firstName: 'Jovan', lastName: 'Đelić', email: 'jdjelic@gmail.com', age: 18}
+            14: {id: 14, firstName: 'Jovan', lastName: 'Đelić', email: 'jdjelic@gmail.com', age: 18},
+            15: {id: 15, firstName: 'Dragan', lastName: 'Lalić', email: 'drgnllc@gmail.com', age: 18}
         };
 
         this.getAllUsers = function () {
