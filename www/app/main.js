@@ -15,7 +15,7 @@ import appContentModule from './components/app-content/app-content.directive';
 import dcUsers from './components/users/users.module';
 
 import 'bootstrap/css/bootstrap.css!';
-import 'assets/css/styles.css!';
+import '/assets/css/styles.css!';
 
 export let mainModule = angular.module('main', [
 
